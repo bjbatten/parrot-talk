@@ -2,6 +2,7 @@
 
 import { useGameStore } from "@/lib/game-store"
 import { HotspotButton } from "./hotspot-button"
+import Player from "./player"
 
 export function SceneView() {
   const state = useGameStore((s) => s.state)
@@ -100,6 +101,9 @@ export function SceneView() {
           <HotspotButton key={hotspot.id} hotspot={hotspot} />
         ))}
       </div>
+
+      {/* Player character */}
+      <Player />
     </div>
   )
 }
